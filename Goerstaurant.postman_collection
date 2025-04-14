@@ -1,0 +1,437 @@
+{
+	"info": {
+		"_postman_id": "78a82bfa-3008-4d53-b3cc-fe26103b9f26",
+		"name": "Goers",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24509849"
+	},
+	"item": [
+		{
+			"name": "Restaurant",
+			"item": [
+				{
+					"name": "Report",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/report",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"report"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Restaurant",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/restaurants?search=&perPage=10&page=1&day_of_week=Tue,Sun&opening_time=08:00&closing_time=21:00",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"restaurants"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": ""
+								},
+								{
+									"key": "perPage",
+									"value": "10"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "day_of_week",
+									"value": "Tue,Sun"
+								},
+								{
+									"key": "opening_time",
+									"value": "08:00"
+								},
+								{
+									"key": "closing_time",
+									"value": "21:00"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Restaurant",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Tes Restaurant 1",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "This is the restaurant of the meat",
+									"type": "text"
+								},
+								{
+									"key": "photo",
+									"type": "file",
+									"src": "/C:/Users/arvin/Downloads/premium_photo-1661883237884-263e8de8869b.jpeg"
+								},
+								{
+									"key": "lat",
+									"value": "-6.200000",
+									"type": "text"
+								},
+								{
+									"key": "long",
+									"value": "106.816666",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "Cafe",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/restaurants",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"restaurants"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Restaurant Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "_method",
+									"value": "PUT",
+									"type": "text"
+								},
+								{
+									"key": "id",
+									"value": "13",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "Buffet",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Oakwood Restaurant",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "This is the restaurant of the meat",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "photo",
+									"type": "file",
+									"src": "/C:/Users/arvin/Downloads/premium_photo-1661883237884-263e8de8869b.jpeg",
+									"disabled": true
+								},
+								{
+									"key": "lat",
+									"value": "-6.200000",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "long",
+									"value": "106.816666",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/restaurants/13",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"restaurants",
+								"13"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Restaurant Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/restaurants/13",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"restaurants",
+								"13"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Arvi\",\r\n    \"email\": \"arvinaufal.dev@gmail.com\",\r\n    \"username\": \"arvinaufal\",\r\n    \"password\": \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Verify",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/verify?data=eyJpdiI6InhtcWRqOE8vd1dSNm9VUy83b2p1L0E9PSIsInZhbHVlIjoiWjJMTnV5dDBhdW9wS0llMFRGVGtVTm5SVk12aUM1T0FGMkxIR0x0WUxuZTJ3cjNnQzNtaFJpUHV6ZXF4WkovUCIsIm1hYyI6ImY4NGI4ZjZmNTRjMTdhMmY1NTc2ZWIzYzAxNDMyNTA4OTdkYzVkYjY0MzVmYzRkMDI4NWUyMDFjOGQ4NWJhNTQiLCJ0YWciOiIifQ==",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"verify"
+					],
+					"query": [
+						{
+							"key": "data",
+							"value": "eyJpdiI6InhtcWRqOE8vd1dSNm9VUy83b2p1L0E9PSIsInZhbHVlIjoiWjJMTnV5dDBhdW9wS0llMFRGVGtVTm5SVk12aUM1T0FGMkxIR0x0WUxuZTJ3cjNnQzNtaFJpUHV6ZXF4WkovUCIsIm1hYyI6ImY4NGI4ZjZmNTRjMTdhMmY1NTc2ZWIzYzAxNDMyNTA4OTdkYzVkYjY0MzVmYzRkMDI4NWUyMDFjOGQ4NWJhNTQiLCJ0YWciOiIifQ=="
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"emailUsername\": \"arvinaufal.dev@gmail.com\",\r\n    \"password\": \"11111111\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

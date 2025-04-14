@@ -1,0 +1,30 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bg-primary-goers {
+  background-color: rgb(202, 63, 75);
+}
+
+.text-primary-goers {
+  font-style: rgb(202, 63, 75);
+}
+
+@layer components {
+  .custom-toast-container {
+      @apply w-[450px]; /* Adjust width as needed */
+  }
+  .custom-toast {
+      @apply min-h-[60px] text-sm;
+  }
+  .custom-toast-body {
+      @apply py-3 px-4;
+  }
+}
